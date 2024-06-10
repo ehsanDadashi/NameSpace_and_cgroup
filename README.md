@@ -50,3 +50,6 @@ nc -zv 10.20.20.2 80
 
 ![image](https://github.com/ehsanDadashi/NameSpace_and_cgroup/assets/29996315/6d8ad1d8-1682-4487-a07b-3103c9284fbf)
 
+# shape of our sample
+![image](https://github.com/ehsanDadashi/NameSpace_and_cgroup/assets/29996315/9d427d86-a540-4422-899c-f15f2c289c4f)
+
