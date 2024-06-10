@@ -1,0 +1,23 @@
+# create name space 1 
+ip netns add NS1
+ip netns exec NS1 python3 -m http.server 80
+ip netns exec NS1 ip a
+
+ip netns list
+
+#create name space 2
+ip netns add NS2
+ip netns exec NS2 python3 -m http.server 80
+ip netns exec NS2 ip a
+
+ip link add veth_ns1 type veth peer name veth_ns2
+ip link set veth_ns1  netns NS1
+ip link set veth_ns2  netns NS2
+
+ip netns exec NS1 /bin/bash
+ip addr add 10.20.20.1/24 dev veth_ns1
+ip link set veth_ns1 up
+
+ip netns exec NS2 /bin/bash
+ip addr add 10.20.20.2/24 dev veth_ns2
+ip link set veth_ns2 up
