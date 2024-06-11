@@ -1,5 +1,5 @@
 # NameSpace_and_cgroup
-how to create a container in linux without install container manager tools
+how to create a container in linux without install container manager tools (like docker)
 
 # first create two name space 
 ip netns add NS1
