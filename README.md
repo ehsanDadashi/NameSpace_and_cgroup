@@ -6,7 +6,7 @@ ip netns add NS1
 
 ip netns add NS2
 
-# see name spacesin your linux server
+# see list of name spaces in your linux server
 ip netns list
 
 ![image](https://github.com/ehsanDadashi/NameSpace_and_cgroup/assets/29996315/6e3dbd65-0d22-4ab6-a4ac-2bf607be8218)
